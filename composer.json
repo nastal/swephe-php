@@ -16,7 +16,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4|^8.0",
-        "illuminate/collections": "^8.0",
+        "illuminate/collections": ">=6.0",
         "nesbot/carbon": "^2.0"
     },
     "require-dev": {
