@@ -1,0 +1,38 @@
+{
+    "name": "nastasin/swephetest",
+    "description": "Wrapper for Swiss Ephemeris swisseph command - swetest. Can be used to get planetary positions for specified location and time.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nastasin\\Swephetest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Nastasin",
+            "email": "alex.nastasin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0|^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nastasin\\Swephetest\\SwepheServiceProvider"
+            ],
+            "aliases": {
+                "SwephExecService": "Nastasin\\SwepheServiceProvider"
+            }
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "test": "vendor/bin/phpunit"
+    }
+}
