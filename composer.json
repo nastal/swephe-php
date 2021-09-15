@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Nastasin\\Swephetest\\": "src/"
+            "Nastasin\\SwissEpheWrapper\\": "src/"
         }
     },
     "authors": [
@@ -15,7 +15,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "illuminate/collections": "^8.0",
+        "nesbot/carbon": "^2.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.0|^6.0",
@@ -33,6 +35,9 @@
     },
     "scripts": {
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
-        "test": "vendor/bin/phpunit"
+        "test": "vendor/bin/phpunit",
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ]
     }
 }
