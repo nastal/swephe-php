@@ -1,4 +1,4 @@
-#Simple swiss ephemeris wrapper
+# Simple swiss ephemeris wrapper
 
 This package is a simple wrapper around swiss ephemeris test command
 to gain planetary positions with '-sid1' option by default to apply Siderial (Lahiri Ayanamsha) calculations.
@@ -13,12 +13,12 @@ This repository includes following ephemeris files for a period 1800 AD – 2399
 - seas_18.se1 = Main asteroid file
 - swetest = executable file
 
-#Requirements
+## Requirements
 
 This package were tested with builds based on Linux (Ubuntu) and PHP 7.4-fpm and PHP 8.0-fpm
 Additional packages already included in composer file.
 
-#Features
+## Features
 
 - Build-in step and step size options to get planetary positions for period with one execution.
 - Accepts Carbon object with UTC, in result output you 
@@ -27,7 +27,7 @@ Additional packages already included in composer file.
 - Elevation level
 - Outputs [Laravel collection](https://laravel.com/docs/master/collections) of mapped data
 
-#Usage and code examples
+## Usage and code examples
 
 ```
 use Carbon\Carbon;
@@ -45,7 +45,7 @@ $planetary = new SwissEpheWrapper($options);
 $planetary->get()
 ```
 
-###outputs:
+### outputs:
 
 ```
 Illuminate\Support\Collection {#7 ▼
@@ -97,7 +97,7 @@ $planetary = new SwissEpheWrapper($options);
 $planetary->get();
 ```
 
-###outputs:
+### outputs:
 
 ```
 ^ Illuminate\Support\Collection {#8 ▼
