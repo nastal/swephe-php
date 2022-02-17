@@ -29,6 +29,8 @@ Additional packages already included in composer file.
 
 #Usage and code examples
 
+Install with `composer require nastasin/swephetest`
+
 ```
 use Carbon\Carbon;
 use Nastasin\SwissEpheWrapper\SwissEpheWrapper;
