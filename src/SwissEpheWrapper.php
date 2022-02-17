@@ -142,8 +142,8 @@ class SwissEpheWrapper
             throw new Exception('Timezone should be in UTC!');
         }
 
-        $step = isset($options[self::OPT_STEP]) ? $options[self::OPT_STEP] : $this->options[self::OPT_STEP];
-        $stepSize = isset($options[self::OPT_STEPSIZE]) ? $options[self::OPT_STEPSIZE] : $this->options[self::OPT_STEPSIZE];
+        $step = $options[self::OPT_STEP] ?? $this->options[self::OPT_STEP];
+        $stepSize = $options[self::OPT_STEPSIZE] ?? $this->options[self::OPT_STEPSIZE];
         $this->dateRange = CarbonPeriod::create(
             Carbon::parse($this->options[self::OPT_DATETIME]),
             $stepSize . ' days',
@@ -169,7 +169,7 @@ class SwissEpheWrapper
             $options[self::OPT_STEPSIZE]; //step params (one day)
         $string[] = self::PLANET_PREFIX . $options[self::OPT_PLIST]; //body list
         $string[] = self::OUTPUT_PREFIX . $options[self::OPT_PARAMS]; //output
-        $string[] = self::PARAMS_PREFIX; //other params
+        $string[] = self::PARAMS_PREFIX; //Ayanamsha and other params
         $string[] = self::HYPEN . $options[self::OPT_GEOPOS] .
             $options[self::OPT_LAT] .
             ',' .
